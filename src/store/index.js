@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import thunk from "redux-thunk";
+import {thunk} from "redux-thunk";
 //import contadorReducer from "../reducer/contadorReducer";
 import { counterSlice } from "../reducer/contadorSlice";
 import { pokemonSlice } from "../reducer/pokemonSlice";
@@ -10,7 +10,7 @@ const store = configureStore({
         contador: counterSlice.reducer,
         pokemons: pokemonSlice.reducer
     }, 
-    middleware: [thunk]
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk)
 });
 
 export default store;
