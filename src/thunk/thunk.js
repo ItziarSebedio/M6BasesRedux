@@ -8,7 +8,7 @@ export const getPokemons = (page = 0) => {
 
         try {
             //llamada a la API para obtener los datos:
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/ditto?limit=10&offset=${page * 10}`)
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${page * 10}`)
             const data = await response.json()
 
             //si sale todo bien, colocamos los datos en el state, es ecir, despachar la accion fetchPokemons
