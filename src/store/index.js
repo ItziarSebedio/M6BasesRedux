@@ -4,8 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { counterSlice } from "../reducer/contadorSlice";
 import { pokemonSlice } from "../reducer/pokemonSlice";
 
-//import { createSagaMiddleware } from '@redux-saga/core'
-import { createSagaMiddleware } from 'redux-saga';
+import { createSagaMiddleware } from '@redux-saga/core'
 import rootSaga from "../saga";
 
 const sagaMiddleware = createSagaMiddleware()

@@ -19,7 +19,7 @@ function* getPokemons(action) {
         const data = yield call(fetchPokemon, page) 
 
         //Guardamos los datos en la store si todo es exitoso
-        //Humberto puso aca fetchPokemon, sin la s, deberia darle error...
+        //Humberto puso aca fetchPokemon, sin la s, deberia darle error?...
         yield put(fetchPokemons({pokemons: data.results, page: page}))
 
     } catch (error) {
